@@ -149,7 +149,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     };
 
     // Send form data to Netlify function
-    fetch('assets/js/netlify/functions/sendEmail.js', {
+    fetch('/.netlify/functions/sendEmail', {
         method: 'POST',
         body: JSON.stringify(formData),
         headers: { 'Content-Type': 'application/json' }

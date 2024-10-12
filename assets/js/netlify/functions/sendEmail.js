@@ -7,7 +7,7 @@ exports.handler = async (event, context) => {
   // Define your EmailJS service ID, template ID, and API key
   const serviceId = 'service_apq4q6l'; // Replace with your EmailJS service ID
   const templateId = 'template_2cmi6o5'; // Replace with your EmailJS template ID
-  const apiKey = '"f1zZU6E-Cz5ZumipR"'; // Replace with your EmailJS API key
+  const apiKey = 'f1zZU6E-Cz5ZumipR'; // Replace with your EmailJS API key
 
   // Define the template parameters (form data to be sent in the email)
   const templateParams = {
