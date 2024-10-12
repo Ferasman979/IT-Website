@@ -14,7 +14,7 @@ exports.handler = async (event, context) => {
     user_name: name,
     user_email: email,
     phone: phone,
-    message: message,
+    message: message
   };
 
   try {
