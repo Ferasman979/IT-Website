@@ -369,7 +369,7 @@
 					};
 				
 					// Send form data to Netlify function
-					fetch('/.netlify/functions/sendEmail', {
+					fetch('assets/js/netlify/functions/sendEmail.js', {
 						method: 'POST',
 						body: JSON.stringify(formData),
 						headers: { 'Content-Type': 'application/json' }
