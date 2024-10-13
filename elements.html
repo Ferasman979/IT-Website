@@ -294,48 +294,30 @@
 							<p>Please briefly describe the task you need assistance with and include your preferred time for a meeting if you'd like to discuss the details further!</p>
 							
 							
-							<!-- Contact Form -->
-<form id="contact-form">
-    <div class="fields">
-        <div class="field">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required />
-        </div>
-        <div class="field">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required />
-        </div>
-        <div class="field">
-            <label for="phone">Phone Number</label>
-            <input type="tel" name="phone" id="phone" placeholder="123-456-7890 (Optional)" />
-        </div>
-        <div class="field">
-            <label for="message">Message</label>
-            <textarea name="message" id="message" rows="4" required></textarea>
-        </div>
-    </div>
-    <ul class="actions">
-        <li><input type="submit" value="Send Message" /></li>
-    </ul>
-</form>
 
 
 
 							
+							<li class="icon solid fa-envelope">
+								<a href="#" id="email-link">technocratz979@gmail.com</a>
+							</li>
+							
+							<script>
+								document.getElementById('email-link').addEventListener('click', function(event) {
+									event.preventDefault(); // Prevent the default link behavior
+							
+									// Generate a random number
+									const randomNumber = Math.floor(Math.random() * 1000000);
+							
+									// Construct the Gmail URL with the random number in the subject and body
+									const mailToLink = `https://mail.google.com/mail/?view=cm&fs=1&to=technocratz979@gmail.com&su=IT-Services:${randomNumber}&body=Please%20don%27t%20remove%20the%20ticket%20number%20from%20the%20subject:%20${randomNumber}`;
+							
+									// Open the Gmail compose window in a new tab
+									window.open(mailToLink, '_blank');
+								});
+							</script>
 							
 							
-							<!-- <ul class="contact">
-								<li class="icon solid fa-home">
-									Untitled Inc<br />
-									1234 Somewhere Road Suite #2894<br />
-									Nashville, TN 00000-0000
-								</li>
-								<li class="icon solid fa-phone">(000) 000-0000</li>
-								<li class="icon solid fa-envelope"><a href="#">information@untitled.tld</a></li>
-								<li class="icon brands fa-twitter"><a href="#">twitter.com/untitled-tld</a></li>
-								<li class="icon brands fa-facebook-f"><a href="#">facebook.com/untitled-tld</a></li>
-								<li class="icon brands fa-instagram"><a href="#">instagram.com/untitled-tld</a></li>
-							</ul> -->
 							<ul class="copyright">
 								<li>&copy;  All rights reserved.</li><li></li>
 							</ul>
@@ -355,38 +337,7 @@
 
 
 
-			<script>
-				// JavaScript to handle form submission
-				document.getElementById('contact-form').addEventListener('submit', function(event) {
-					event.preventDefault(); // Prevent the default form submission
-				
-					// Gather form data
-					const formData = {
-						name: document.getElementById('name').value,
-						email: document.getElementById('email').value,
-						phone: document.getElementById('phone').value || 'Not provided',
-						message: document.getElementById('message').value
-					};
-				
-					// Send form data to Netlify function
-					fetch('/.netlify/functions/sendEmail', {
-						method: 'POST',
-						body: JSON.stringify(formData),
-						headers: { 'Content-Type': 'application/json' }
-					})
-					.then(response => response.json())
-					.then(data => {
-						if (data.message === 'Email sent successfully!') {
-							alert('Message sent!');
-						} else {
-							alert('Failed to send message. Please try again.');
-						}
-					})
-					.catch(error => {
-						alert('Error occurred: ' + error.message);
-					});
-				});
-				</script>
+			
 <!-- Include the external JavaScript file -->
 
 
