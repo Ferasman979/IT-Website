@@ -132,73 +132,63 @@
 					<div class="inner">
 						<h2 class="major">Get in touch</h2>
 						<p>Please briefly describe the task you need assistance with and include your preferred time for a meeting if you'd like to discuss the details further!</p>
+						<article id="contact" class="panel">
+							
+							<form id="contact-form">
+								<div>
+									<div class="row">
+										<div class="col-6 col-12-medium">
+											<input type="text" name="name" placeholder="Name" required />
+										</div>
+										<div class="col-6 col-12-medium">
+											<input type="email" name="email" placeholder="Email" required />
+										</div>
+										<div class="col-6 col-12-medium">
+											<input type="tel" name="phone" placeholder="Phone (optional)" />
+										</div>
+										<div class="col-12">
+											<input type="text" name="subject" placeholder="Subject" required />
+										</div>
+										<div class="col-12">
+											<textarea name="message" placeholder="Message" rows="6" required></textarea>
+										</div>
+										<div class="col-12">
+											<input type="submit" value="Send Message" />
+										</div>
+									</div>
+								</div>
+							</form>
+						</article>
 						
+						<!-- Footer -->
+						<div id="footer">
+							<ul class="copyright">
+								<p>&copy; 2024 <strong>&lt;Feras&gt; IT Services</strong>. All rights reserved.</p>
+							</ul>
+						</div>
 						
-						<!-- Contact Form -->
-<!-- <form id="contact-form">
-    <div class="fields">
-        <div class="field">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required />
-        </div>
-        <div class="field">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required />
-        </div>
-        <div class="field">
-            <label for="phone">Phone Number</label>
-            <input type="tel" name="phone" id="phone" placeholder="123-456-7890 (Optional)" />
-        </div>
-        <div class="field">
-            <label for="message">Message</label>
-            <textarea name="message" id="message" rows="4" required></textarea>
-        </div>
-    </div>
-    <ul class="actions">
-        <li><input type="submit" value="Send Message" /></li>
-    </ul>
-</form>
- -->
-
-
+						<!-- Scripts -->
+						<script src="assets/js/jquery.min.js"></script>
+						<script src="https://cdn.emailjs.com/dist/email.min.js"></script> <!-- Add EmailJS SDK -->
+						<script src="assets/js/contact-form-handler.js"></script> <!-- Separated JS file -->
+						<script src="assets/js/browser.min.js"></script>
+						<script src="assets/js/breakpoints.min.js"></script>
+						<script src="assets/js/util.js"></script>
+						<script src="assets/js/main.js"></script>
 						
-						
- <li class="icon solid fa-envelope">
-    <a href="#" id="email-link">technocratz979@gmail.com</a>
-</li>
-
-<script>
-    document.getElementById('email-link').addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent the default link behavior
-
-        // Generate a random number
-        const randomNumber = Math.floor(Math.random() * 1000000);
-
-        // Construct the Gmail URL with the random number in the subject and body
-        const mailToLink = `https://mail.google.com/mail/?view=cm&fs=1&to=technocratz979@gmail.com&su=IT-Services:${randomNumber}&body=Please%20don%27t%20remove%20the%20ticket%20number%20from%20the%20subject:%20${randomNumber}`;
-
-        // Open the Gmail compose window in a new tab
-        window.open(mailToLink, '_blank');
-    });
-</script>
-
-
-						<ul class="copyright">
-							<!-- <li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
-						</ul>
 					</div>
 				</section>
 
 			</div>
 
-		<!-- Scripts -->
+		<!-- Scripts
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+			<script src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
 
 			
 
