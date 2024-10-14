@@ -133,12 +133,9 @@
 						<h2 class="major">Get in touch</h2>
 						<p>Please briefly describe the task you need assistance with and include your preferred time for a meeting if you'd like to discuss the details further!</p>
 						
-
-
 						
-						
-<!-- Contact Form -->
-<form id="contact-form">
+						<!-- Contact Form -->
+<!-- <form id="contact-form">
     <div class="fields">
         <div class="field">
             <label for="name">Name</label>
@@ -161,12 +158,30 @@
         <li><input type="submit" value="Send Message" /></li>
     </ul>
 </form>
+ -->
 
-<!-- Include the EmailJS SDK -->
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
-<!-- Link to the external JavaScript file -->
-<script type="text/javascript" src="assets/js/script.js"></script>
+						
+						
+ <li class="icon solid fa-envelope">
+    <a href="#" id="email-link">technocratz979@gmail.com</a>
+</li>
+
+<script>
+    document.getElementById('email-link').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+
+        // Generate a random number
+        const randomNumber = Math.floor(Math.random() * 1000000);
+
+        // Construct the Gmail URL with the random number in the subject and body
+        const mailToLink = `https://mail.google.com/mail/?view=cm&fs=1&to=technocratz979@gmail.com&su=IT-Services:${randomNumber}&body=Please%20don%27t%20remove%20the%20ticket%20number%20from%20the%20subject:%20${randomNumber}`;
+
+        // Open the Gmail compose window in a new tab
+        window.open(mailToLink, '_blank');
+    });
+</script>
+
 
 						<ul class="copyright">
 							<!-- <li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li> -->
