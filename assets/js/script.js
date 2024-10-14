@@ -1,7 +1,3 @@
-// Initialize EmailJS with your User ID
-(function() {
-    emailjs.init("f1zZU6E-Cz5ZumipR");  // Replace with your EmailJS User ID
-})();
 
 // Handle form submission
 document.getElementById('contact-form').addEventListener('submit', function(event) {
@@ -15,8 +11,8 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         message: document.getElementById('message').value
     };
 
-    // Send the email using EmailJS
-    emailjs.send('service_apq4q6l', 'template_2cmi6o5', formData)
+    // Send the email using EmailJS and API Key
+    emailjs.send('service_apq4q6l', 'template_2cmi6o5', formData, 'f1zZU6E-Cz5ZumipR')
         .then(function(response) {
             alert('Message sent successfully!');
         }, function(error) {
